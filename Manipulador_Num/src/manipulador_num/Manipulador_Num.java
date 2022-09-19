@@ -14,6 +14,7 @@ public class Manipulador_Num {
             System.out.println("Menu de Operação com Números :");
             System.out.println("1 - Maior de 2 números");
             System.out.println("2 - Ordenar valores (decrescente)");
+            System.out.println("3 - Soma impares e multiplica pares");
                     
             System.out.println("0 - Sair");
             System.out.println("Selecione a opção pretendida");
@@ -30,6 +31,8 @@ public class Manipulador_Num {
                     }while (x <= 0);
                     NumeroDecrescente.ordenadecrescente(x); 
                     break;
+                case 3:
+                    somaImparesMultiplicaPares(); break;
                     
                 default: System.out.println("Insira Opção válida!");
             }
@@ -47,5 +50,30 @@ public class Manipulador_Num {
        System.out.println(s1);
         x = ler.nextInt();
     }
-    
+
+    private static void somaImparesMultiplicaPares() {
+        int i = 0;
+        long par = 0;
+        int impar = 0;
+        
+                
+        for ( i = 0; i < 30; i++ ){
+            if (i%2 == 0){
+                if (i>2){
+                par = par*i;
+                }
+            else{
+            par = i;
+            }
+        }
+        
+        else{
+                impar = impar+i; 
+                }
+        
+        }
+        System.out.println("O valor da soma dos números impares é "+impar);
+        System.out.println("A multiplicação dos valores pares é "+ par);
+        }
+      
 }
